@@ -880,7 +880,7 @@ class Pigeonholes extends LibertyMime {
 		if( $this->isValid() ) {
 			$this->mDb->StartTrans();
 			// get all items that are part of the sub tree
-			require_once( LIBERTY_PKG_PATH.'LibertyStructure.php' );
+			require_once( LIBERTYSTRUCTURE_PKG_PATH.'LibertyStructure.php' );
 			$struct = new LibertyStructure();
 
 			// include the current structure id as well
