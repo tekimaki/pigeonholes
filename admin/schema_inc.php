@@ -52,6 +52,6 @@ $gBitInstaller->registerUserPermissions( PIGEONHOLES_PKG_NAME, array(
 
 // Requirements
 $gBitInstaller->registerRequirements( PIGEONHOLES_PKG_NAME, array(
-    'liberty' => array( 'min' => '2.1.4' ),
+    'liberty' => array( 'min' => '2.1.5' ),
 ));
 
