@@ -33,6 +33,13 @@ require_once( LIBERTYSTRUCTURE_PKG_PATH.'LibertyStructure.php' );
  * @package  pigeonholes
  */
 class Pigeonholes extends LibertyMime {
+
+	/**
+	 * If this content is being viewed within a structure
+	 * @public
+	 */
+	var $mStructureId;
+
 	/**
 	* initiate class
 	* @param $pContentId content id of the pigeonhole - use either one of the ids.
