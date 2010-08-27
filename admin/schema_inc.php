@@ -1,5 +1,22 @@
 <?php
 
+global $gBitSystem;
+
+$gBitSystem->registerPackageInfo( PIGEONHOLES_PKG_NAME, array(
+	'description' => "A Categorisation system that makes it easy to keep an overview of your data. Has a simple, yet powerful interface for categorising multiple pages at once.",
+	'license' => '<a href="http://www.gnu.org/licenses/licenses.html#LGPL">LGPL</a>',
+) );
+
+// Requirements
+$gBitSystem->registerRequirements( PIGEONHOLES_PKG_NAME, array(
+    'liberty' => array( 'min' => '2.1.5' ),
+));
+
+
+// Install process
+global $gBitInstaller;
+if( is_object( $gBitInstaller ) ){
+
 $tables = array(
 	'pigeonholes' => "
 		content_id I4 NOTNULL PRIMARY,
@@ -21,11 +38,6 @@ global $gBitInstaller;
 foreach( array_keys( $tables ) AS $tableName ) {
 	$gBitInstaller->registerSchemaTable( PIGEONHOLES_PKG_NAME, $tableName, $tables[$tableName] );
 }
-
-$gBitInstaller->registerPackageInfo( PIGEONHOLES_PKG_NAME, array(
-	'description' => "A Categorisation system that makes it easy to keep an overview of your data. Has a simple, yet powerful interface for categorising multiple pages at once.",
-	'license' => '<a href="http://www.gnu.org/licenses/licenses.html#LGPL">LGPL</a>',
-) );
 
 // ### Sequences
 $sequences = array (
@@ -50,8 +62,4 @@ $gBitInstaller->registerUserPermissions( PIGEONHOLES_PKG_NAME, array(
 	//array( 'p_pigeonholes_admin', 'Can administer all aspects of pigeonholes', 'editors', PIGEONHOLES_PKG_NAME ),
 ) );
 
-// Requirements
-$gBitInstaller->registerRequirements( PIGEONHOLES_PKG_NAME, array(
-    'liberty' => array( 'min' => '2.1.5' ),
-));
-
+}
