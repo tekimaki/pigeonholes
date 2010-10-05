@@ -49,3 +49,5 @@ pigeonholes:
     categorising multiple pages at once.
   license: 
     html: '<a href="http://www.gnu.org/licenses/licenses.html#LGPL">LGPL</a>'
+  contenttypes:
+    Pigeonholes: Pigeonholes.php
