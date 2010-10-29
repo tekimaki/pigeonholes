@@ -85,7 +85,7 @@
 
 						{include file="bitpackage:liberty/edit_storage_list.tpl"}
 
-						<div class="row submit">
+						<div class="buttonHolder row submit">
 							<input type="submit" name="pigeonhole_store" value="{tr}Save Category{/tr}" />
 						</div>
 					{/legend}

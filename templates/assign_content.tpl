@@ -56,7 +56,7 @@
 					{/forminput}
 				</div>
 
-				<div class="row submit">
+				<div class="buttonHolder row submit">
 					<input type="submit" value="{tr}Restrict Listing{/tr}" name="search_objects" />
 				</div>
 			{/form}
@@ -172,7 +172,7 @@
 						{/if}
 					</div>
 
-					<div class="row submit">
+					<div class="buttonHolder row submit">
 						<input type="submit" name="insert_content" value="Insert Content into Categories" />
 						<input type="hidden" name="list_page" value="{$listInfo.current_page}" />
 						<input type="hidden" name="find" value="{$listInfo.find}" />
